@@ -10,6 +10,7 @@ class App extends Component{
     this.state= {
       monsters: [], 
       searchField: ''
+      
     }
   }
   componentDidMount() {
@@ -18,7 +19,8 @@ class App extends Component{
     .then(arr => this.setState({monsters : arr}))
   }
   handleChange = e => {
-    this.setState({searchField: e.target.value});
+    this.setState({searchField: e.target.value,
+    });
   }
   render(){
     const { monsters, searchField } = this.state;
@@ -27,7 +29,7 @@ class App extends Component{
     return(
 
         <div className="App">
-        <h1>Monster Rolodox </h1>
+        <h1>Monster bebe</h1>
         <SearchBox placeholder='search monsters' handleChange={this.handleChange}/>
         <CardList monsters={filteredmonst}>
         </CardList>
